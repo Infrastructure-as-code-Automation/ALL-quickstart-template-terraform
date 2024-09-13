@@ -132,7 +132,7 @@ module "hci_cluster" {
 
   # Deployment secrets key vault settings
   create_key_vault                             = var.create_key_vault
-  keyvault_name                                = local.keyvault_name
+  keyvault_name                                = var.keyvault_name == "" ? local.keyvault_name : var.keyvault_name
   key_vault_location                           = var.key_vault_location
   key_vault_resource_group                     = var.key_vault_resource_group
   keyvault_tags                                = var.keyvault_tags

@@ -114,6 +114,12 @@ variable "compute_rdma_enabled" {
   description = "Indicates whether RDMA is enabled for compute."
 }
 
+variable "keyvault_name" {
+  type        = string
+  default     = ""
+  description = "The name override of the key vault."
+}
+
 variable "create_key_vault" {
   type        = bool
   default     = true
