@@ -122,7 +122,7 @@ module "hci_cluster" {
   witness_storage_account_id       = var.witness_storage_account_id
   random_suffix                    = local.random_suffix
   create_witness_storage_account   = var.create_witness_storage_account
-  witness_storage_account_name     = local.witness_storage_account_name
+  witness_storage_account_name     = var.witness_storage_account_name == "" ? local.witness_storage_account_name : var.witness_storage_account_name
   cross_tenant_replication_enabled = var.cross_tenant_replication_enabled
   account_replication_type         = var.account_replication_type
   allow_nested_items_to_be_public  = var.allow_nested_items_to_be_public

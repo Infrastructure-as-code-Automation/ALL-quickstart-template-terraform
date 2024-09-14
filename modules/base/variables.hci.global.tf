@@ -132,6 +132,12 @@ variable "create_witness_storage_account" {
   description = "Set to true to create the witness storage account, or false to skip it"
 }
 
+variable "witness_storage_account_name" {
+  type        = string
+  default     = ""
+  description = "The name override of the witness storage account."
+}
+
 variable "cross_tenant_replication_enabled" {
   type        = bool
   default     = false
