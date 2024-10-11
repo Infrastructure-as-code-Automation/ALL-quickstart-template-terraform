@@ -190,7 +190,7 @@ module "hci_cluster" {
 
 module "hci_logicalnetwork" {
   source  = "Azure/avm-res-azurestackhci-logicalnetwork/azurerm"
-  version = "~>0.3"
+  version = "~>0.4"
 
   depends_on       = [module.hci_cluster]
   enable_telemetry = var.enable_telemetry
@@ -209,6 +209,7 @@ module "hci_logicalnetwork" {
   vlan_id              = var.lnet_vlan_id
   route_name           = var.route_name
   subnet_0_name        = var.subnet_0_name
+  ip_allocation_method = "Static"
 }
 
 module "aks_arc" {
